@@ -88,6 +88,10 @@ export const metadata: Metadata = {
   verification: {
     google: 'SEU_CODIGO_GOOGLE_SEARCH_CONSOLE',
   },
+  icons: {
+    icon: '/images/icon.webp',
+    apple: '/images/icon.webp',
+  },
 }
 
 const jsonLd = {
