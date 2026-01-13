@@ -73,6 +73,7 @@ export function About() {
                 alt="RNA Manipulação"
                 fill
                 className="object-cover"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-wine/40 to-transparent" />
             </div>
