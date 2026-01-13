@@ -1,5 +1,6 @@
 import { Navbar, Footer } from '@/components/layout'
 import { Hero, Services, About, Differentials, Testimonials, Location, Instagram, FAQ } from '@/components/sections'
+import { WhatsAppButton } from '@/components/ui'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <FAQ />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   )
 }

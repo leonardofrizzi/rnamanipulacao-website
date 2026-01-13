@@ -15,12 +15,12 @@ export const SITE_CONFIG = {
 } as const
 
 export const NAV_LINKS = [
-  { label: 'Início', href: '#home' },
-  { label: 'Serviços', href: '#servicos' },
-  { label: 'Sobre', href: '#sobre' },
-  { label: 'Diferenciais', href: '#diferenciais' },
-  { label: 'Depoimentos', href: '#depoimentos' },
-  { label: 'Localização', href: '#localizacao' },
-  { label: 'Contato', href: '#contato' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Início', href: '/#home' },
+  { label: 'Serviços', href: '/#servicos' },
+  { label: 'Sobre', href: '/#sobre' },
+  { label: 'Diferenciais', href: '/#diferenciais' },
+  { label: 'Depoimentos', href: '/#depoimentos' },
+  { label: 'Localização', href: '/#localizacao' },
+  { label: 'Contato', href: '/#contato' },
+  { label: 'FAQ', href: '/#faq' },
 ] as const

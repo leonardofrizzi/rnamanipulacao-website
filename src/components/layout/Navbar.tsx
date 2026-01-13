@@ -7,7 +7,11 @@ import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { NAV_LINKS, SITE_CONFIG } from '@/constants'
 
-export function Navbar() {
+interface NavbarProps {
+  solid?: boolean
+}
+
+export function Navbar({ solid = false }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -20,18 +24,20 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const showSolid = solid || isScrolled
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 transition-all duration-500">
       <nav
         className={`mx-auto flex items-center justify-between transition-all duration-500 ease-out ${
-          isScrolled
+          showSolid
             ? 'mt-4 max-w-5xl rounded-full bg-wine/95 backdrop-blur-md shadow-2xl shadow-wine/20 px-6 py-3 border border-gold-dark/20'
             : 'mt-0 max-w-7xl bg-transparent px-4 py-6'
         }`}
       >
-        <Link href="#home" className="relative group">
+        <Link href="/#home" className="relative group">
           <div className={`relative transition-all duration-500 ${
-            isScrolled ? 'w-12 h-12' : 'w-20 h-20'
+            showSolid ? 'w-12 h-12' : 'w-20 h-20'
           }`}>
             <Image
               src="/images/rnafarmaciademanipulacao.webp"
@@ -44,7 +50,7 @@ export function Navbar() {
         </Link>
 
         <ul className={`hidden lg:flex items-center transition-all duration-500 ${
-          isScrolled ? 'gap-5' : 'gap-8'
+          showSolid ? 'gap-5' : 'gap-8'
         }`}>
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
@@ -102,7 +108,7 @@ export function Navbar() {
 
       <div
         className={`lg:hidden transition-all duration-500 ease-out overflow-hidden ${
-          isScrolled ? 'mx-auto max-w-5xl' : ''
+          showSolid ? 'mx-auto max-w-5xl' : ''
         } ${isMobileMenuOpen ? 'max-h-[700px] opacity-100' : 'max-h-0 opacity-0'}`}
       >
         <div className={`backdrop-blur-md px-6 py-6 mt-2 border border-gold-dark/20 ${
