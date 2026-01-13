@@ -1,4 +1,4 @@
-import { Navbar } from '@/components/layout'
+import { Navbar, Footer } from '@/components/layout'
 import { Hero, Services, About, Differentials, Testimonials, Location, Instagram, FAQ } from '@/components/sections'
 
 export default function Home() {
@@ -15,6 +15,7 @@ export default function Home() {
         <Instagram />
         <FAQ />
       </main>
+      <Footer />
     </>
   )
 }
