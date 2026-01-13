@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
   phone: '(21) 98290-1000',
   whatsapp: '5521982901000',
   instagram: 'https://instagram.com/rnamanipulacao',
-  email: 'contato@rnamanipulacao.com.br', // TODO: Add real email
+  email: 'contato@rnamanipulacao.com.br', 
   googleMapsUrl: 'https://maps.google.com/?q=Av.+das+Americas+11365+Rio+de+Janeiro', // TODO: Add real maps URL
 } as const
 
