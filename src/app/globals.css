@@ -90,3 +90,19 @@ h1, h2, h3, h4, h5, h6 {
 .animate-fade-in-up:nth-child(3) { animation-delay: 0.3s; }
 .animate-fade-in-up:nth-child(4) { animation-delay: 0.4s; }
 .animate-fade-in-up:nth-child(5) { animation-delay: 0.5s; }
+
+.animate-in {
+  animation: animate-in 0.6s ease-out forwards;
+}
+
+@keyframes animate-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

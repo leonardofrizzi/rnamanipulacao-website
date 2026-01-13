@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { FaCapsules, FaFlask, FaLeaf, FaDumbbell, FaHeart, FaPrescriptionBottleAlt, FaWhatsapp } from 'react-icons/fa'
-import { SectionDivider } from '@/components/ui'
+import { SectionDivider, AnimatedSection } from '@/components/ui'
 import { SITE_CONFIG } from '@/constants'
 
 const services = [
@@ -43,7 +43,7 @@ export function Services() {
     <section id="servicos" className="relative py-24 bg-cream">
       <SectionDivider />
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-wine/10 text-wine text-sm font-medium mb-4">
             Nossos Serviços
           </span>
@@ -56,12 +56,13 @@ export function Services() {
           <p className="text-lg text-wine/70 max-w-2xl mx-auto">
             Oferecemos uma ampla gama de serviços farmacêuticos com foco em qualidade, personalização e atendimento especializado.
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <div
+            <AnimatedSection
               key={index}
+              delay={index * 0.1}
               className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-cream-dark hover:border-gold/30 overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-gold-light/5 to-gold-dark/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -81,7 +82,7 @@ export function Services() {
               </div>
 
               <div className="absolute -bottom-2 -right-2 w-24 h-24 bg-gradient-to-br from-gold-light/10 to-gold-dark/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 

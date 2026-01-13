@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { HiChevronDown } from 'react-icons/hi'
-import { SectionDivider } from '@/components/ui'
+import { SectionDivider, AnimatedSection } from '@/components/ui'
 
 const faqs = [
   {
@@ -50,7 +50,7 @@ export function FAQ() {
       <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-wine/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-wine/10 text-wine text-sm font-medium mb-4">
             Dúvidas Frequentes
           </span>
@@ -60,12 +60,13 @@ export function FAQ() {
               frequentes
             </span>
           </h2>
-        </div>
+        </AnimatedSection>
 
         <div className="max-w-6xl mx-auto space-y-4">
           {faqs.map((faq, index) => (
-            <div
+            <AnimatedSection
               key={index}
+              delay={index * 0.05}
               className="bg-white rounded-2xl shadow-sm border border-cream-dark overflow-hidden"
             >
               <button
@@ -89,7 +90,7 @@ export function FAQ() {
                   {faq.answer}
                 </p>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

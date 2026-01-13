@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { FaInstagram } from 'react-icons/fa'
-import { SectionDivider } from '@/components/ui'
+import { SectionDivider, AnimatedSection } from '@/components/ui'
 import { SITE_CONFIG } from '@/constants'
 
 export function Instagram() {
@@ -14,7 +14,7 @@ export function Instagram() {
       <div className="absolute bottom-1/4 -left-32 w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center">
+        <AnimatedSection className="max-w-3xl mx-auto text-center">
           <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-gold-light text-sm font-medium mb-4">
             Contato
           </span>
@@ -39,7 +39,7 @@ export function Instagram() {
             <FaInstagram size={22} className="relative z-10" />
             <span className="relative z-10">@rnamanipulacao</span>
           </Link>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   )

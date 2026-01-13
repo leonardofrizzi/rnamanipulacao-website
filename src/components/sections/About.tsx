@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaWhatsapp } from 'react-icons/fa'
-import { SectionDivider } from '@/components/ui'
+import { SectionDivider, AnimatedSection } from '@/components/ui'
 import { SITE_CONFIG } from '@/constants'
 
 export function About() {
@@ -12,7 +12,7 @@ export function About() {
       <SectionDivider />
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
-          <div>
+          <AnimatedSection>
             <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-gold-light text-sm font-medium mb-6">
               Sobre Nós
             </span>
@@ -64,9 +64,9 @@ export function About() {
                 <span className="relative z-10">Fale Conosco</span>
               </Link>
             </div>
-          </div>
+          </AnimatedSection>
 
-          <div className="relative order-last lg:order-last flex">
+          <AnimatedSection delay={0.2} className="relative order-last lg:order-last flex">
             <div className="relative w-full rounded-2xl overflow-hidden min-h-[300px] lg:min-h-0">
               <Image
                 src="/images/sobre.webp"
@@ -78,7 +78,7 @@ export function About() {
             </div>
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-gold-light/20 to-gold-dark/20 rounded-full blur-2xl" />
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-gold-light/10 to-gold-dark/10 rounded-full blur-xl" />
-          </div>
+          </AnimatedSection>
         </div>
 
         <div className="mt-12 text-center lg:hidden">

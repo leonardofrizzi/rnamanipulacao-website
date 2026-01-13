@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { FaWhatsapp } from 'react-icons/fa'
 import { HiLightBulb, HiShieldCheck, HiBeaker, HiHeart, HiSparkles } from 'react-icons/hi'
-import { SectionDivider } from '@/components/ui'
+import { SectionDivider, AnimatedSection } from '@/components/ui'
 import { SITE_CONFIG } from '@/constants'
 
 const differentials = [
@@ -43,7 +43,7 @@ export function Differentials() {
       <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-wine/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
+        <AnimatedSection className="text-center mb-20">
           <span className="inline-block px-4 py-1.5 rounded-full bg-wine/10 text-wine text-sm font-medium mb-4">
             Nossos Diferenciais
           </span>
@@ -54,7 +54,7 @@ export function Differentials() {
             </span>
             ?
           </h2>
-        </div>
+        </AnimatedSection>
 
         <div className="relative max-w-5xl mx-auto">
           <div className="absolute left-4 lg:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold/20 via-gold/40 to-gold/20" />
@@ -62,8 +62,9 @@ export function Differentials() {
           {differentials.map((item, index) => {
             const isLeft = index % 2 === 0
             return (
-              <div
+              <AnimatedSection
                 key={index}
+                delay={index * 0.1}
                 className={`relative flex items-start mb-12 lg:mb-16 last:mb-0 ${
                   isLeft ? 'lg:justify-start' : 'lg:justify-end'
                 }`}
@@ -102,7 +103,7 @@ export function Differentials() {
                     />
                   </div>
                 </div>
-              </div>
+              </AnimatedSection>
             )
           })}
         </div>

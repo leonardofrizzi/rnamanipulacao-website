@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { SectionDivider } from '@/components/ui'
+import { SectionDivider, AnimatedSection } from '@/components/ui'
 import { FcGoogle } from 'react-icons/fc'
 import { HiStar } from 'react-icons/hi'
 
@@ -62,7 +62,7 @@ export function Testimonials() {
       <div className="absolute bottom-1/4 -left-32 w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-gold-light text-sm font-medium mb-4">
             Depoimentos
           </span>
@@ -83,12 +83,13 @@ export function Testimonials() {
             </div>
             <span className="text-white/80 font-medium">5.0 no Google</span>
           </div>
-        </div>
+        </AnimatedSection>
 
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div
+            <AnimatedSection
               key={index}
+              delay={index * 0.05}
               className="break-inside-avoid mb-6 group"
             >
               <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-white/20 hover:border-gold/30">
@@ -110,7 +111,7 @@ export function Testimonials() {
                   {testimonial.text}
                 </p>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 
