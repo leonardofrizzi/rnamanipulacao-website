@@ -1,5 +1,5 @@
 import { Navbar } from '@/components/layout'
-import { Hero, Services, About, Differentials, Testimonials, Location, Instagram } from '@/components/sections'
+import { Hero, Services, About, Differentials, Testimonials, Location, Instagram, FAQ } from '@/components/sections'
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
         <Testimonials />
         <Location />
         <Instagram />
+        <FAQ />
       </main>
     </>
   )
