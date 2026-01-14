@@ -60,7 +60,7 @@ export const metadata: Metadata = {
       'Farmácia de manipulação no Rio de Janeiro, Barra da Tijuca. Medicamentos manipulados personalizados, dermocosméticos, suplementos e homeopatia. Entrega em todo RJ.',
     images: [
       {
-        url: '/images/hero.webp',
+        url: '/images/rna.webp',
         width: 1200,
         height: 630,
         alt: 'RNA Manipulação - Farmácia de Manipulação no Rio de Janeiro',
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     title: `${SITE_CONFIG.name} | Farmácia de Manipulação no Rio de Janeiro`,
     description:
       'Farmácia de manipulação no Rio de Janeiro, Barra da Tijuca. Medicamentos manipulados personalizados. Entrega em todo RJ.',
-    images: ['/images/hero.webp'],
+    images: ['/images/rna.webp'],
   },
   robots: {
     index: true,
